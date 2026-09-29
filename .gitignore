@@ -8,3 +8,6 @@ output/
 *.iml
 Thumbs.db
 .DS_Store
+
+# Anything placed in a subfolder of samples/input (e.g. an extracted dist zip)
+samples/input/*/

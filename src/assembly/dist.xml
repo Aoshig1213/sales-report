@@ -20,6 +20,15 @@
         <fileSet>
             <directory>samples/input</directory>
             <outputDirectory>input</outputDirectory>
+            <!-- Only the sample files directly under samples/input (not anything else left in the folder) -->
+            <includes>
+                <include>*.csv</include>
+                <include>*.xlsx</include>
+                <include>*.xls</include>
+            </includes>
+            <excludes>
+                <exclude>~$*</exclude>
+            </excludes>
         </fileSet>
     </fileSets>
 </assembly>
