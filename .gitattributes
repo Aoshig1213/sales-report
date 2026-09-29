@@ -1,0 +1,8 @@
+/mvnw text eol=lf
+*.cmd text eol=crlf
+
+# Keep the Shift_JIS bat and the text file byte-for-byte (CRLF, no conversion)
+*.bat -text
+*.txt -text
+# Sample input files are kept exactly as a client would send them
+samples/** -text

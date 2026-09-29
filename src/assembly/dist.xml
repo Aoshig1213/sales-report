@@ -1,0 +1,25 @@
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.2.0 https://maven.apache.org/xsd/assembly-2.2.0.xsd">
+    <!-- Zip for end users: unzip, drop files into input/, double-click the bat -->
+    <id>dist</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <baseDirectory>sales-report</baseDirectory>
+    <files>
+        <file>
+            <source>${project.build.directory}/sales-report.jar</source>
+        </file>
+    </files>
+    <fileSets>
+        <fileSet>
+            <directory>src/dist</directory>
+            <outputDirectory>.</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>samples/input</directory>
+            <outputDirectory>input</outputDirectory>
+        </fileSet>
+    </fileSets>
+</assembly>
